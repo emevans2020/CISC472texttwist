@@ -1,0 +1,17 @@
+h1 {
+	text-align: center;
+	color: black;
+  }
+  
+  #instructions {
+	text-align: center;
+  }
+  
+  body {
+	background-color: #E6E6FA;
+  }
+  
+  #correct, #incorrect {
+	float: left;
+	width: 40%;
+  }
