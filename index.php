@@ -1,7 +1,4 @@
 <?php
-	include("index.html");
-	include("index.css");
-	include("index.js");
     //this is the basic way of getting a database handler from PDO, PHP's built in quasi-ORM
     $dbhandle = new PDO("sqlite:scrabble.sqlite") or die("Failed to open DB");
     if (!$dbhandle) die ($error);
@@ -27,7 +24,13 @@
     //making to this line means everything was great with this request
     header('HTTP/1.1 200 OK');
     //this lets the browser know to expect json
-    header('Content-Type: application/json');
+	header('Content-Type: application/json');
+	
+	echo file_get_contents("index.html");
+	echo file_get_contents("index.css");
+	echo file_get_contents("index.js");
     //this creates json and gives it back to the browser
-    echo json_encode($results);
+	echo json_encode($results);
+	
+
 ?>
