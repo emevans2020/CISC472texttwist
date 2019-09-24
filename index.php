@@ -42,15 +42,22 @@
 			$statement->execute();
 			
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
- 
-        foreach ($results as $answer) {
-           $tmparr = explode('@@', $answer);
-           foreach ($tmparr as $a){
-            $response['words']=array_push(
-               $response['words'], $a);
-           }
+		foreach ($results as $row) {
+			$response['words'] = array_merge(
+				$response['words'],
+				explode('@@', $row['words'])
+			);
 		}
 	}
+
+        // foreach ($results as $answer) {
+        //    $tmparr = explode('@@', $answer);
+        //    foreach ($tmparr as $a){
+        //     $response['words']=array_push(
+        //        $response['words'], $a);
+        //    }
+		// }
+	// }
 }
 
 	  //this part is perhaps overkill but I wanted to set the HTTP headers and status code
