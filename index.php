@@ -1,6 +1,5 @@
 <?php
-	// header('Access-Control-Allow-Origin: *');
-	// header('Content-Type: application/json');
+	header('Access-Control-Allow-Origin: *');
 
     function generate_rack($n){
 		$tileBag = "AAAAAAAAABBCCDDDDEEEEEEEEEEEEFFGGGHHIIIIIIIIIJKLLLLMMNNNNNNOOOOOOOOPPQRRRRRRSSSSTTTTTTUUUUVVWWXYYZ";
