@@ -47,6 +47,18 @@
             success: data=>{ showRacks(data)}
         });
       });
-    });
+	});
+	var getRandWord = function(rack){
+  	var xhr = new XMLHttpRequest();
+  	xhr.onload = function(){
+    if (this.status == 200){
+      randomWord.innerHTML = this.response;
+   		}
+ 	};
+	xhr.open("GET", "https://evans-text-twister.herokuapp.com/");
+	xhr.send();
+		console.log('click');
+	};
+	document.getElementById("grabRack").addEventListener('click', getRandWord);
   </script>
 </html>
