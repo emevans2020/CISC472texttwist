@@ -1,3 +1,37 @@
+// $(document).ready(function(){
+  
+//   let showRacks = function(racks){
+// 	$("#bingos").html('');
+// 	racks.map(rack=>{
+// 	  $("#bingos").append(`<li>${rack.rack}: <span class="answer hidden">${rack.words}</span></li>`);
+// 	});
+// 	$("#bingos li").on("click", function(evt){
+// 	  $(evt.currentTarget).find(".answer").toggleClass("hidden");
+// 	});
+//   }
+  
+//   $("#grabmore").on("click", function(){
+// 	$.ajax({
+// 		method: "GET",
+// 		url: "api.php",
+// 		success: data=>{ showRacks(data)}
+// 	});
+//   });
+// });
+// var getRandWord = function(rack){
+//   var xhr = new XMLHttpRequest();
+//   xhr.onload = function(){
+// if (this.status == 200){
+//   randomWord.innerHTML = this.response;
+// 	   }
+//  };
+// xhr.open("GET", "https://evans-text-twister.herokuapp.com/");
+// xhr.send();
+// 	console.log('click');
+// };
+// document.getElementById("grabRack").addEventListener('click', getRandWord);
+// </script>
+
 function genericGetRequest(URL, callback){
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -5,7 +39,7 @@ function genericGetRequest(URL, callback){
             callback(JSON.parse(this.response));
         }
     };
-    xhr.open("GET", "https://evans-text-twister.herokuapp.com/");
+    xhr.open("GET", url);
     xhr.send();
 };
 
@@ -106,5 +140,4 @@ var TextTwist = function() {
     
     this.init();
 }
-
 new TextTwist();
