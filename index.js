@@ -32,12 +32,6 @@ var TextTwist = function() {
             this.rackButtons[i].disabled = false;
         }
         this.showGuess();
-        setTimeout(function(){
-            var divRes = document.getElementById('guess-result');
-            divRes.textContent = '';
-            divRes.classList.remove('bg-success');
-            divRes.classList.remove('bg-danger');
-        }, 2000);
     };
     
     this.check = function() {
