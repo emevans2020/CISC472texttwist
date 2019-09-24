@@ -39,7 +39,7 @@ function genericGetRequest(URL, callback){
             callback(JSON.parse(this.response));
         }
     };
-    xhr.open("GET", url);
+    xhr.open("GET", "https://evans-text-twister.herokuapp.com/");
     xhr.send();
 };
 
@@ -57,7 +57,7 @@ var TextTwist = function() {
     
     this.finish = function() {
         document.getElementById('rack').innerHTML = '<h2>You won!</h2>';
-        document.getElementById("div-guess").innerHTML = '';
+        document.getElementById('div-guess').innerHTML = '';
     }
     
     this.reset = function() {
@@ -66,6 +66,12 @@ var TextTwist = function() {
             this.rackButtons[i].disabled = false;
         }
         this.showGuess();
+        setTimeout(function(){
+            var divRes = document.getElementById('guess-result');
+            divRes.textContent = '';
+            divRes.classList.remove('bg-success');
+            divRes.classList.remove('bg-danger');
+        }, 2000);
     };
     
     this.check = function() {
@@ -140,4 +146,5 @@ var TextTwist = function() {
     
     this.init();
 }
+
 new TextTwist();

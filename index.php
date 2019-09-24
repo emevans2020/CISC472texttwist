@@ -1,6 +1,6 @@
 <?php
-	// header('Access-Control-Allow-Origin: *');
-	// header('Content-Type: application/json');
+	header('Access-Control-Allow-Origin: *');
+	header('Content-Type: application/json');
 
     function generate_rack($n){
 		$tileBag = "AAAAAAAAABBCCDDDDEEEEEEEEEEEEFFGGGHHIIIIIIIIIJKLLLLMMNNNNNNOOOOOOOOPPQRRRRRRSSSSTTTTTTUUUUVVWWXYYZ";
@@ -28,8 +28,8 @@
 	  }
 	  $racks = array_unique($racks);
 
-	  $response  = array('letters'=> $rack, 'words'=> array());
-	//   print_r($racks);
+	  $response = array('letters' => $rack, 'words' => array());
+	  //   print_r($racks);
 	  //this is the basic way of getting a database handler from PDO, PHP's built in quasi-ORM
 	  $dbhandle = new PDO("sqlite:scrabble.sqlite") or die("Failed to open DB");
 	  if (!$dbhandle) die ($error);
@@ -73,6 +73,6 @@
 	  //this lets the browser know to expect json
 	  header('Content-Type: application/json');
 	  //this creates json and gives it back to the browser
-	  echo json_encode($results);
+	  echo json_encode($reponse);
 	//   echo generate_rack(7);
 ?>
