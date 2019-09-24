@@ -57,7 +57,7 @@ var TextTwist = function() {
     
     this.finish = function() {
         document.getElementById('rack').innerHTML = '<h2>You won!</h2>';
-        document.getElementById('div-guess').innerHTML = '';
+        document.getElementById("div-guess").innerHTML = '';
     }
     
     this.reset = function() {
@@ -121,7 +121,7 @@ var TextTwist = function() {
         document.getElementById('words-remaining').textContent = self.wordsRemaining;
         self.rack = res.letters;
         var letters = self.rack.split('');
-        var html = 'YOUR RACK:<br>';
+        var html = 'Enter a guess:<br>';
         for (var i = 0; i < letters.length; i++) {
             html += '<button class="btn btn-primary rack-button" data-letter="' + letters[i] + '">' + letters[i] + '</button>';
         }
@@ -134,7 +134,7 @@ var TextTwist = function() {
         document.getElementById("start").addEventListener('click', function(){
             this.disabled = true;
             this.textContent = 'Loading...';
-            genericGetRequest("word.php", self.processResult);
+            genericGetRequest("index.php", self.processResult);
         });
     };
     
