@@ -1,5 +1,5 @@
 <?php
-	header('Access-Control-Allow-Origin: *');
+	//header('Access-Control-Allow-Origin: *');
 
     function generate_rack($n){
 		$tileBag = "AAAAAAAAABBCCDDDDEEEEEEEEEEEEFFGGGHHIIIIIIIIIJKLLLLMMNNNNNNOOOOOOOOPPQRRRRRRSSSSTTTTTTUUUUVVWWXYYZ";
@@ -34,23 +34,25 @@
 	  $dbhandle = new PDO("sqlite:scrabble.sqlite") or die("Failed to open DB");
 	  if (!$dbhandle) die ($error);
 	  
-	foreach ($racks as $index=>$r){
-        if (array_key_exists($index, $racks)){
-		$query = "SELECT words FROM racks WHERE rack = '".$r."'";
-        $statement = $dbhandle->prepare($query);
-        //$statement->bindParam(1, $r, PDO::PARAM_STR);
-        $statement->execute();
-        
-    	$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+		foreach ($racks as $index=>$r){
+			if (array_key_exists($index, $racks)){
+			$query = "SELECT words FROM racks WHERE rack = '".$r."'";
+			$statement = $dbhandle->prepare($query);
+			//$statement->bindParam(1, $r, PDO::PARAM_STR);
+			$statement->execute();
+			
+			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
  
         foreach ($results as $answer) {
-            $tmparr = explode('@@', $answer);
-            foreach ($tmparr as $a){
-            $response['words']=array_merge()(
-                $response['words'], $a);
-            }
-        }
-    }
+           $tmparr = explode('@@', $answer);
+           foreach ($tmparr as $a){
+            $response['words']=array_push(
+               $response['words'], $a);
+           }
+		}
+	}
+}
+
 	  //this part is perhaps overkill but I wanted to set the HTTP headers and status code
 	  //making to this line means everything was great with this request
 	  header('HTTP/1.1 200 OK');
