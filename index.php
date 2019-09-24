@@ -27,8 +27,6 @@
 	header('Content-Type: application/json');
 	
 	echo file_get_contents("index.html");
-	echo file_get_contents("index.css");
-	echo file_get_contents("index.js");
     //this creates json and gives it back to the browser
 	echo json_encode($results);
 	
