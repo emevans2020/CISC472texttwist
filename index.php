@@ -1,5 +1,5 @@
 <?php
-	//header('Access-Control-Allow-Origin: *');
+	header('Access-Control-Allow-Origin: *');
 
     function generate_rack($n){
 		$tileBag = "AAAAAAAAABBCCDDDDEEEEEEEEEEEEFFGGGHHIIIIIIIIIJKLLLLMMNNNNNNOOOOOOOOPPQRRRRRRSSSSTTTTTTUUUUVVWWXYYZ";
@@ -49,17 +49,7 @@
 			);
 		}
 	}
-
-        // foreach ($results as $answer) {
-        //    $tmparr = explode('@@', $answer);
-        //    foreach ($tmparr as $a){
-        //     $response['words']=array_push(
-        //        $response['words'], $a);
-        //    }
-		// }
-	// }
 }
-
 	  //this part is perhaps overkill but I wanted to set the HTTP headers and status code
 	  //making to this line means everything was great with this request
 	  header('HTTP/1.1 200 OK');
