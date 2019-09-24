@@ -127,7 +127,7 @@ var TextTwist = function() {
         document.getElementById('words-remaining').textContent = self.wordsRemaining;
         self.rack = res.letters;
         var letters = self.rack.split('');
-        var html = 'Enter a guess:<br>';
+        var html = 'Enter a guess: <br>';
         for (var i = 0; i < letters.length; i++) {
             html += '<button class="btn btn-primary rack-button" data-letter="' + letters[i] + '">' + letters[i] + '</button>';
         }

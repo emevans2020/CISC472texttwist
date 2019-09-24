@@ -32,24 +32,23 @@
 <ul id="correctWords"></ul>
 <ul id="incorrectGuesses"></ul> -->
   <!-- </body> -->
-<body>
-	<h1 class="page-header text-center">Welcome to My Text Twister</h1>
-	<p id = "instructions">To play all you need to do is enter in all the word 
-		combinations you can think of in the field below based off of the randomly 
-		generated characters. Good Luck! </p>
-
-	<div class="div-btn-start" id="div-btn-start">
-		<button type="button" class="btn btn-primary btn-lg btn-block" id="start">Click Here To Start</button>
-	</div>
-
-	<div class="rack text-center" id="rack"></div>
-		
-	<div class="guess text-center" id="div-guess">
-		Enter a guess:<br>
-		<div class="div-guess-letters lead" id="guess"></div>
-		<button class="btn btn-primary" id="btn-guess">Submit  <span class="badge" id="words-remaining"></span></button>
-		<p class="guess-result" id="guess-result"></p>
-	</div>
-</body>
+  <body>
+        <div class="main">
+			<h1 class="page-header text-center">Welcome to My Text Twister</h1>
+			<p id = "instructions">To play all you need to do is enter in all the word 
+					combinations you can think of in the field below based off of the randomly 
+					generated characters. Good Luck! </p>
+            <div class="div-btn-start" id="div-btn-start">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="start">Click Here To Start</button>
+            </div>
+            <div class="rack text-center" id="rack"></div>
+            <div class="guess text-center" id="div-guess">
+                Enter a guess: <br>
+                <div class="div-guess-letters lead" id="guess"></div>
+                <button class="btn btn-primary" id="btn-guess">Check  <span class="badge" id="words-remaining"></span></button>
+                <p class="guess-result" id="guess-result"></p>
+            </div>
+        </div>
+    </body>
 	<script src="/index.js"> </script>
 </html>
