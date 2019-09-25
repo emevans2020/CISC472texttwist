@@ -1,6 +1,6 @@
 {
-	"name": "text twister app",
-	"description": "text twister",
+	"name": "text-twister",
+	"description": "text-twister",
 	"scripts": {
 	"start": "index.js"
 	},

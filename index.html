@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <title>Text Twister</title>
+	<title>Text Twister</title>
     <style>
       .hidden {
         display: none;
       }
 	</style>
-	<script src="index.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   </head>
-  <body>
+  <!-- <body>
 	<h1>Welcome To My Text Twister</h1>
-    <p id = "instructions">To play all you need to do is enter in all the word 
-	combinations you can think of in the field below based off of the randomly 
+    <p id = "instructions">To play all you need to do is enter in all the word
+	combinations you can think of in the field below based off of the randomly
 	generated characters. Good Luck! </p>
 	<div class="div-btn-start" id="div-btn-start">
 			<button type="button" class="btn btn-primary btn-lg btn-block" id="start">Start</button>
 	</div>
     <button class="rack text-center" id="rack"> Click here to grab a randomly generated rack</button>
-	
+
 	<p id = "rack">Random Rack Generated: </p>
 	<p>There are: <p id = "words-remaining"></p>words remaining</p>
-	<!-- After this is where user enters their guess    -->
+	<!-- After this is where user enters their guess
 	<div class="guess text-center" id="div-guess"></div>
     <form id="guess" > Enter a word: <input type="text" name="fname">
 	<button type="button" id = "btn-guess" value="Submit" onclick="function(res)">
 	<p id = "guess-result"> You guessed: </p>
   	</form>
-	</input>
-	
+	</input> -->
+
 <!-- Below Lists the correct words and incorrect guesses -->
-<p id = "correct"> Correct Words: </p>
+<!-- <p id = "correct"> Correct Words: </p>
 <p id = "incorrect"> Incorrect Guesses: </p>
 <ul id="correctWords"></ul>
 <ul id="incorrectGuesses"></ul>
   </body>
 	<script src="index.js"> </script>
+</html> -->
+<html>
+    <body>
+        <div class="main">
+            <h1 class="page-header text-center">Welcome to my Text Twist</h1>
+            <div class="div-btn-start" id="div-btn-start">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="start">Start</button>
+            </div>
+            <div class="rack text-center" id="rack"></div>
+            <div class="guess text-center" id="div-guess">
+				Enter a guess: <br>
+                <div class="div-guess-letters lead" id="guess"></div>
+                <button class="btn btn-primary" id="btn-guess">Check  <span class="badge" id="words-remaining"></span></button>
+                <p class="guess-result" id="guess-result"></p>
+            </div>
+        </div>
+    </body>
+    <script src="index.js"></script>
 </html>
