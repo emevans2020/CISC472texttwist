@@ -143,7 +143,6 @@ var TextTwist = function() {
             genericGetRequest("index.php", self.processResult);
         });
     };
-    
     this.init();
 }
 
