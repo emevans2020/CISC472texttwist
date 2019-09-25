@@ -136,14 +136,14 @@ var TextTwist = function() {
         self.play();
     };
     
-    this.init = function() {
+    function init() {
         document.getElementById("start").addEventListener('click', function(){
             this.disabled = true;
             this.textContent = 'Loading...';
             genericGetRequest("index.php", self.processResult);
         });
     };
-    this.init();
+    init();
 }
 
 new TextTwist();
