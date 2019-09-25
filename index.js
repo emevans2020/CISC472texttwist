@@ -91,7 +91,7 @@ var TextTwist = function() {
                 this.finish();
                 return;
             }
-            msg = 'Correct!';
+            msg = "Correct!!!";
             msgClass = 'bg-success';
             this.wordsRemaining--;
             document.getElementById('words-remaining').textContent = this.wordsRemaining;
