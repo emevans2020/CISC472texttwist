@@ -1,6 +1,4 @@
 {
-	"name": "text-twister",
-	"description": "text-twister",
 	"scripts": {
 	"start": "index.js"
 	},
