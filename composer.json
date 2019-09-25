@@ -1,4 +1,9 @@
 {
+	"name": "text twister app",
+	"description": "text twister",
+	"scripts": {
+	"start": "index.js"
+	},
 	"require": {
 		"php": "~7",
 		"ext-pdo_sqlite": "*"
