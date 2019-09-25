@@ -26,7 +26,7 @@
 		  }
 	  }
 	  $racks = array_unique($racks);
-	  print_r($racks);
+	//   print_r($racks);
 	  
 	  $response = array('letters' => $rack, 'words' => array());
 	  //   print_r($racks);
