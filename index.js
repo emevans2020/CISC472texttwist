@@ -110,5 +110,6 @@ var TextTwist = function() {
         });
     };
 	this.init();
-new TextTwist();
 }
+new TextTwist();
+
