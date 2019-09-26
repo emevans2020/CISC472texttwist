@@ -56,7 +56,9 @@ var TextTwist = function() {
             if (this.wordsRemaining == 1) {
                 this.finish();
                 return;
-            }
+			}
+			correctWord = this.guess;
+			document.getElementById('correctGuess').textContent = correctWord;
             msg = "Correct!!!";
             msgClass = 'bg-success';
             this.wordsRemaining--;
