@@ -36,8 +36,8 @@
 	  
 		foreach ($racks as $index=>$r){
 			if (array_key_exists($index, $racks)){
-			$query = "SELECT words FROM racks WHERE rack = '".$r."'";
-			echo $query;
+			$query = "SELECT words FROM racks WHERE rack=\"".$r."\"";
+			//echo $query;
 			$statement = $dbhandle->prepare($query);
 			//$statement->bindParam(1, $r, PDO::PARAM_STR);
 			$statement->execute();
