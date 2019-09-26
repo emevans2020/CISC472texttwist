@@ -102,14 +102,14 @@ var TextTwist = function() {
         self.play();
     };
     
-    function init() {
+    this.init = function() {
         document.getElementById("start").addEventListener('click', function(){
             this.disabled = true;
             this.textContent = 'Loading...';
-            genericGetRequest("api/index.php", self.processResult);
+            genericGetRequest("word.php", self.processResult);
         });
     };
-    init();
+    this.init();
 }
 
 new TextTwist();
