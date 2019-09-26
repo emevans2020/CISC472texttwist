@@ -86,7 +86,7 @@ var TextTwist = function() {
         });
     };
     
-    this.processResult = function(res) {
+	this.processResult = function(res) {
         document.getElementById("div-btn-start").style.display = 'none';
         self.words = res.words;
         self.wordsRemaining = res.words.length;
@@ -112,4 +112,3 @@ var TextTwist = function() {
 	this.init();
 }
 new TextTwist();
-
