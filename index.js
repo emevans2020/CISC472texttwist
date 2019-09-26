@@ -106,7 +106,7 @@ var TextTwist = function() {
         document.getElementById("start").addEventListener('click', function(){
             this.disabled = true;
             this.textContent = 'Loading...';
-            genericGetRequest("text-twister/api/index.php", self.processResult);
+            genericGetRequest("api/index.php", self.processResult);
         });
     };
 	this.init();
