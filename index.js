@@ -5,7 +5,7 @@ function genericGetRequest(URL, callback){
             callback(JSON.parse(this.response));
         }
     };
-    xhr.open("GET", "https://evans-text-twister.herokuapp.com");
+    xhr.open("GET", URL);
     xhr.send();
 };
 
