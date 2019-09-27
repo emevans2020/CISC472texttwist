@@ -7,6 +7,10 @@
 	text-align: center;
 }
 
+#rack-button{
+	height: 50px;
+}
+
 body {
 	background-color: #E6E6FA;
 }
