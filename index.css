@@ -8,6 +8,7 @@
 	border-style: solid;
 	border-color: #7B68EE; 
 	position: relative;
+	margin: 10px;
 }
 
 .rack > button{
