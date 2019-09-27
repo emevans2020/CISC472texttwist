@@ -50,15 +50,15 @@ var TextTwist = function() {
             if (this.words[i] != null && this.guess == this.words[i]) {
                 this.words[i] = null;
 				found = true;
-				correctWord = this.guess;
                 break;
             }
         }
         if (found) {
             if (this.wordsRemaining == 1) {
-                this.finish();
+				this.finish();
                 return;
 			}
+			this.correct();
             msg = "Correct!!!";
             msgClass = 'bg-success';
             this.wordsRemaining--;
@@ -72,9 +72,9 @@ var TextTwist = function() {
         divRes.classList.toggle(msgClass);
         this.reset();
 	}
-	
-    function addCorrect(){
-		var correct = correctWord;
+
+    this.addCorrect = function(){
+		var correct = document.getElementById('guess');
 		var ul = document.getElementById("correctGuess");
 		var li = document.createElement("li");
 	li.appendChild(document.createTextNode(correct));
