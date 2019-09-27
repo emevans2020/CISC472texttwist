@@ -43,7 +43,8 @@ var TextTwist = function() {
     this.check = function() {
         var length = this.words.length,
             found = false,
-            msg,
+			msg,
+			correctWord,
             msgClass;
         for (var i = 0; i < length; i++) {
             if (this.words[i] != null && this.guess == this.words[i]) {
@@ -58,13 +59,6 @@ var TextTwist = function() {
                 this.finish();
                 return;
 			}
-			function addCorrect(){
-				var correct = correctWord;
-				var ul = document.getElementById("correctGuess");
-				var li = document.createElement("li");
-			li.appendChild(document.createTextNode(correct));
-			ul.appendChild(li);
-			}
             msg = "Correct!!!";
             msgClass = 'bg-success';
             this.wordsRemaining--;
@@ -77,8 +71,16 @@ var TextTwist = function() {
         divRes.textContent = msg;
         divRes.classList.toggle(msgClass);
         this.reset();
-    }
-    
+	}
+	
+    function addCorrect(){
+		var correct = correctWord;
+		var ul = document.getElementById("correctGuess");
+		var li = document.createElement("li");
+	li.appendChild(document.createTextNode(correct));
+	ul.appendChild(li);
+	}
+
     this.play = function() {
         document.getElementById('div-guess').style.display = 'block';
         this.guess = '';
