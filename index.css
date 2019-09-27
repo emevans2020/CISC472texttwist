@@ -1,4 +1,4 @@
-#page-header{
+#welcome{
 	text-align: center;
 	color: black;
 }
@@ -10,6 +10,7 @@
 .rack > button{
 	height: 50px;
 	width: 50px;
+	text-size-adjust: inherit;
 	text-align: center;
 	font-size: 12px;
 	border-radius: 8px;
