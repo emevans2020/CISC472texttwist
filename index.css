@@ -9,6 +9,10 @@
 
 button{
 	height: 50px;
+	width: 50px;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 8px;
 }
 
 body {
