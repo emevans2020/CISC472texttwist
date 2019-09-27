@@ -48,7 +48,8 @@ var TextTwist = function() {
         for (var i = 0; i < length; i++) {
             if (this.words[i] != null && this.guess == this.words[i]) {
                 this.words[i] = null;
-                found = true;
+				found = true;
+				// correctWord = this.guess;
                 break;
             }
         }
@@ -57,8 +58,14 @@ var TextTwist = function() {
                 this.finish();
                 return;
 			}
-			correctWord = this.guess;
-			document.getElementById('correctGuess').textContent = correctWord;
+			function addCorrect(){
+				var correct = document.getElementById('guess').textContent,
+					listItem = document.getElementById('correctGuess'),
+					liNode = document.createElement("LI"),
+					txtNode = document.createTextNode(correct);
+			liNode.appendChild(txtNode);
+			listItem.appendChild(liNode);
+			}
             msg = "Correct!!!";
             msgClass = 'bg-success';
             this.wordsRemaining--;
