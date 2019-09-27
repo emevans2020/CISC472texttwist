@@ -10,3 +10,7 @@
 body {
 	background-color: #E6E6FA;
 }
+
+.div-guess-letters {
+    height: 35px;
+}
