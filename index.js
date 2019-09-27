@@ -49,7 +49,7 @@ var TextTwist = function() {
             if (this.words[i] != null && this.guess == this.words[i]) {
                 this.words[i] = null;
 				found = true;
-				// correctWord = this.guess;
+				correctWord = this.guess;
                 break;
             }
         }
@@ -59,7 +59,7 @@ var TextTwist = function() {
                 return;
 			}
 			function addCorrect(){
-				var correct = document.getElementById('guess').textContent,
+				var correct = correctWord,
 					listItem = document.getElementById('correctGuess'),
 					liNode = document.createElement("LI"),
 					txtNode = document.createTextNode(correct);
