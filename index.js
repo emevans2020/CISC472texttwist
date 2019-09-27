@@ -59,12 +59,12 @@ var TextTwist = function() {
                 return;
 			}
 			function addCorrect(){
-				var correct = correctWord,
-					listItem = document.getElementById('correctGuess'),
-					liNode = document.createElement("LI"),
-					txtNode = document.createTextNode(correct);
-			liNode.appendChild(txtNode);
-			listItem.appendChild(liNode);
+				var correct = correctWord;
+				var ul = document.getElementById("correctGuess");
+				var li = document.createElement("li");
+			li.appendChild(document.createTextNode(correct));
+			ul.appendChild(li);
+			  }
 			}
             msg = "Correct!!!";
             msgClass = 'bg-success';
