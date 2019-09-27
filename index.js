@@ -64,7 +64,6 @@ var TextTwist = function() {
 				var li = document.createElement("li");
 			li.appendChild(document.createTextNode(correct));
 			ul.appendChild(li);
-			  }
 			}
             msg = "Correct!!!";
             msgClass = 'bg-success';
