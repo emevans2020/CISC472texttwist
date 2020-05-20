@@ -1,34 +1,45 @@
-<!DOCTYPE html>
 <html>
-  <head>
-	<title>Evans Text Twister</title>
-    <style>
-      .hidden {
-        display: none;
-      }
-	</style>
-	<link rel="stylesheet" href="index.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  </head>
-	  <body>
-		  <div class="main">
-			  <h1 id = "welcome" class="page-header text-center">Welcome to My Text Twist</h1>
-			  <p id="instructions">Instructions: To play click on the letter you want to use
-				  for the word and once you've entered in the word fully. Click on check when you 
-				  are ready to see if your guess is correct. Good Luck!
-			  </p>
-			  <div class="div-btn-start" id="div-btn-start">
-				  <button type="button" class="btn btn-primary btn-lg btn-block" id="start">Start</button>
-			  </div>
-			  <div class="rack text-center" id="rack"></div>
-			  <div class="guess text-center" id="div-guess">
-				Enter a guess: <br>
-				  <div class="div-guess-letters lead" id="guess"></div>
-				  <button class="btn btn-primary" id="btn-guess">Check</button>
-				  <p>Words Remaining: </p><span class="badge" id="words-remaining"></span> 
-				  <p class="guess-result" id="guess-result"></p>
-			  </div>
-		  </div>
-	  </body>
-	  <script type="text/javascript" src="index.js"></script>
-  </html>
+<head>
+    <link rel="icon" href="./images/clubbackground.jpg" type="image/gif" sizes="16x16">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>DDR-Project 1</title>
+</head>
+<body>
+
+<div id="BackgroundScene">
+  <div id="DanceScoreboard">
+    <div id="GameStopped"><button id="StartBtn" class="btnStyle" onclick="gameStarted=true;">Begin Game</button>
+      <br><br><br>
+      <div class="Status"><strong>Click Begin Game to Start</strong></div>
+    </div>
+    <div id="GameRunning"><button id="StopBtn" class="btnStyle" onclick="history.go(0);">Stop Game</button>
+      <div id="Status" class="Status"></div>
+    </div>
+  </div>
+<p style="color:blue;">Points Earned:</p>
+<div id="dancePoints" class="Points"><div class="OutputText" id="CorrectCount">0</div>
+    </div>
+  <div class="stage"></div>
+  <div id="DanceFloor">
+    <div id="StaticArrows">
+      <div id="SLeftArrow"></div>
+      <div id="SDownArrow"></div>
+      <div id="SUpArrow"></div>
+      <div id="SRightArrow"></div>
+    </div>
+    <div id="MovingArrows"></div>
+      <div id="LeftArrow"></div>
+      <div id="UpArrow"></div>
+      <div id="DownArrow"></div>
+      <div id="RightArrow"></div>
+  </div>
+
+  <script>
+  jQuery('#StartBtn').click(function(){
+  jQuery('.Status').hide();
+  })
+</script>
+</body>
+</html>
