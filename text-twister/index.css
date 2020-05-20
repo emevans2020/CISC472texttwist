@@ -1,0 +1,29 @@
+#welcome{
+	text-align: center;
+	color: black;
+}
+
+#instructions {
+	text-align: center;
+	border-style: solid;
+	border-color: #7B68EE; 
+	position: relative;
+	padding: 10px;
+}
+
+.rack > button{
+	height: 50px;
+	width: 50px;
+	text-size-adjust: inherit;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 8px;
+}
+
+body {
+	background-color: #E6E6FA;
+}
+
+.div-guess-letters {
+    height: 35px;
+}
